@@ -1,0 +1,7 @@
+<article class="food-bank-location">
+    <h1>{{details.name }}</h1>
+    <p>{{details.location}}</p>
+    <p>{{details.hours}}</p>
+    <button (click)="detailsChange.emit(details)" class="button primary">Details</button>
+    <button class="button secondary">Directions</button>
+</article>

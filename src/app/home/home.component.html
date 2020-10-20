@@ -1,0 +1,29 @@
+<main>
+    <header>
+        <h1>
+            <a routerLink="">HLPERS</a>
+            <app-logo></app-logo>
+        </h1>
+        <a routerLink="/settings">Settings</a>
+    </header>
+    <section>
+        <div class="locations" [ngClass]="isOpenLocations ? '': 'hide-locations'">
+            <h1>Locations <button (click)="toggleOpenLocations()">Hide/Show</button></h1>
+            <article class="food-bank-listing">
+                <app-food-bank-location [details]="fbank" (detailsChange)="selected = $event"
+                    *ngFor="let fbank of foodBanks">
+                </app-food-bank-location>
+            </article>
+        </div>
+        <article class="food-bank-details">
+            <button class="button primary" (click)="selected=null">Close Details</button>
+            <article class="food-bank-details-panel" *ngIf="selected">
+                <h1>{{selected.name}} <small>{{selected.location}}</small></h1>
+                <div>
+                    <img src="{{selected.image}}">
+                    {{ selected.description }}
+                </div>
+            </article>
+        </article>
+    </section>
+</main>

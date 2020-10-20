@@ -1,0 +1,96 @@
+header {
+    color: white;
+    background-color: #003049;
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: space-between;
+}
+
+header a {
+    padding-top: 5px;
+    text-decoration: none;
+}
+
+header a:visited {
+    color: white;
+}
+
+header>h1 {
+    display: flex;
+    align-items: center;
+}
+
+section {
+    padding: 20px;
+}
+
+main>section {
+    display: flex;
+    flex-direction: row;
+}
+
+h1.title {
+    font-size: 30pt;
+    font-weight: bold;
+}
+
+.food-bank-listing {
+    flex: 1;
+    margin-right: 100px;
+}
+
+.food-bank-details {
+    flex: 2;
+}
+
+.food-bank-details-panel {
+    margin-top: 10px;
+    margin-bottom: 45px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px gray;
+}
+
+.food-bank-details-panel>h1 {
+    font-weight: bold;
+    font-size: 25pt;
+    margin-bottom: 40px;
+}
+
+.food-bank-details-panel img {
+    height: 300px;
+    margin-right: 30px;
+}
+
+.food-bank-details-panel div {
+    display: flex;
+}
+
+.food-bank-details-panel>h1>small {
+    font-weight: normal;
+    font-size: 20pt;
+}
+
+.hide-locations {
+    height: 25px;
+    overflow-y: hidden;
+}
+
+@keyframes myAnimation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spin {
+    animation: myAnimation 3s infinite;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    height: 150px;
+}
