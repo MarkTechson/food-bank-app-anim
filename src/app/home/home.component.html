@@ -17,7 +17,7 @@
         </div>
         <article class="food-bank-details">
             <button class="button primary" (click)="selected=null">Close Details</button>
-            <article class="food-bank-details-panel" *ngIf="selected">
+            <article @fadeIn class="food-bank-details-panel" *ngIf="selected">
                 <h1>{{selected.name}} <small>{{selected.location}}</small></h1>
                 <div>
                     <img src="{{selected.image}}">
